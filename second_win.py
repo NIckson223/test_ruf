@@ -48,6 +48,10 @@ class TestWin(QWidget):
 
         self.text_timer = QLabel(txt_timer)
         self.text_name=QLabel(txt_name)
+        self.line_name=QLineEdit(txt_hintname)
+        self.text_age=QLabel(txt_age)
+        self.line_age =QLineEdit(txt_hintage)
+        self.text_test1=QLabel(txt_test1)
 
         self.l_line = QVBoxLayout()
         self.r_line = QVBoxLayout()
