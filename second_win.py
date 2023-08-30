@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (QApplication , QWidget,QLabel,
 
 
 from instr import*
-
+from final_win import*
 
 class TestWin(QWidget):
     def __init__(self):
@@ -52,6 +52,7 @@ class TestWin(QWidget):
         self.text_age=QLabel(txt_age)
         self.line_age =QLineEdit(txt_hintage)
         self.text_test1=QLabel(txt_test1)
+        self.btn_test1=QPushButton(txt_starttest1)
 
         self.l_line = QVBoxLayout()
         self.r_line = QVBoxLayout()
@@ -77,4 +78,8 @@ class TestWin(QWidget):
         self.setLayout(self.h_line)
 
     def connects(self):
-        pass
+        self.btn_next.clicked.connect(self.next_click)
+
+    def next_click(self):
+        self.fw=FinalWin()
+        self.hide()
