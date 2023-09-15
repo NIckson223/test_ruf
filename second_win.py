@@ -142,7 +142,10 @@ class TestWin(QWidget):
         self.btn_test3.clicked.connect(self.timer_final)
 
     def next_click(self):
-        self.fw=FinalWin()
+        self.exp = Experiment(self.line_age.text(),
+                              self.line_test1.text(), self.line_test2.text(), self.line_test3.text())
+
+        self.fw=FinalWin(self.exp)
         self.hide()
 
 
